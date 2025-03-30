@@ -29,7 +29,7 @@ class scrapeFiles:
             href = link.get('href', '').strip()
 
             if self.validateLink(href, 'Anexo', '.pdf'):
-                downloadFiles(href)
+                downloadFiles(href, 'downloads')
         
 
 if __name__ == '__main__':
