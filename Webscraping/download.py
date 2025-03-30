@@ -15,7 +15,7 @@ class downloadFiles:
 
     def save(self, response, file):
         with open(file, 'wb') as f:
-            for chunk in response.iter_content(4024): 
+            for chunk in response.iter_content(8192): 
                 f.write(chunk)
 
             print(f"Arquivo {file} baixado com sucesso!")

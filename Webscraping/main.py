@@ -31,7 +31,8 @@ class scrapeFiles:
 
             if self.validateLink(href, 'Anexo', '.pdf'):
                 downloadFiles(href, 'downloads')
-        
+
+        compactFiles('downloads')
 
 
 if __name__ == '__main__':
