@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 
 from download import downloadFiles
+from compact import compactFiles
 
 URL = "https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/atualizacao-do-rol-de-procedimentos";
 
@@ -31,6 +32,7 @@ class scrapeFiles:
             if self.validateLink(href, 'Anexo', '.pdf'):
                 downloadFiles(href, 'downloads')
         
+
 
 if __name__ == '__main__':
     scraper = scrapeFiles()

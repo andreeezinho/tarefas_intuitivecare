@@ -1,6 +1,5 @@
 import os
 import requests
-from urllib.parse import urljoin
 
 class downloadFiles:
 
@@ -18,5 +17,5 @@ class downloadFiles:
         with open(file, 'wb') as f:
             for chunk in response.iter_content(4024): 
                 f.write(chunk)
-                
+
             print(f"Arquivo {file} baixado com sucesso!")
