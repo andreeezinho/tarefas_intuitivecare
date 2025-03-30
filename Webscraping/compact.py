@@ -7,7 +7,7 @@ class compactFiles:
         self.compact(dir_name)
 
     def compact(self, dir_name):
-        zip_dir = os.path.join(dir_name, 'Anexos.zip')
+        zip_dir = os.path.join('', 'Anexos.zip')
 
         with ZipFile(zip_dir, 'w', ZIP_DEFLATED) as zip_file:
             for name in os.listdir(dir_name):
