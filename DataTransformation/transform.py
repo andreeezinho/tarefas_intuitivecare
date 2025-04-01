@@ -20,3 +20,5 @@ class transform:
         
         with open("Arquivo.csv", "w") as f:
             f.writelines(lines)
+
+        csv_file.close()

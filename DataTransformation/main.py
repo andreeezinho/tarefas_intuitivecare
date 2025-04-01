@@ -1,6 +1,7 @@
 import os
 
 from transform import transform
+from compact import compactFiles
 
 class transformData:
 
@@ -13,6 +14,8 @@ class transformData:
     def getDataTransformed(self, pdf_path):
         if transform.dataInCsv(pdf_path) == True:
             transform.renameLines()
+
+            compactFiles.compact("Teste_André.zip", "Arquivo.csv")
 
         return False
         
