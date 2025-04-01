@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS demonstracoes_contabeis (
     descricao TEXT,
     vl_saldo_inicial FLOAT,
     vl_saldo_final FLOAT
-)
+);
 
 -- relatorio cadop
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS relatorio_cadop (
     cargo_representante VARCHAR(150),
     regiao_de_comercializacao INT,
     data_registro_ans DATE
-)
+);
 
 -- importar relatorio_cadop.csv
 LOAD DATA INFILE 'data/Relatorio_cadop.csv'
