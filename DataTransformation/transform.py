@@ -22,3 +22,5 @@ class transform:
             f.writelines(lines)
 
         csv_file.close()
+
+        return True
