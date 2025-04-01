@@ -18,13 +18,12 @@ CREATE TABLE IF NOT EXISTS relatorio_cadop (
     nome_fantasia VARCHAR(200),
     modalidade VARCHAR(150),
     logradouro VARCHAR(255),
-    logradouro VARCHAR(255),
     numero VARCHAR(10),
     complemento VARCHAR(200),
     bairro VARCHAR(100),
     cidade VARCHAR(150),
     uf VARCHAR(2),
-    CEP VARCHAR(10),
+    cep VARCHAR(10),
     ddd VARCHAR(2),
     telefone VARCHAR(15),
     fax VARCHAR(12),
@@ -33,7 +32,6 @@ CREATE TABLE IF NOT EXISTS relatorio_cadop (
     cargo_representante VARCHAR(150),
     regiao_de_comercializacao INT,
     data_registro_ans DATE
-
 )
 
 -- importar relatorio_cadop.csv
