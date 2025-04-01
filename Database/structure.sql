@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS relatorio_cadop (
     razao_social VARCHAR(255) NOT NULL,
     nome_fantasia VARCHAR(200),
     modalidade VARCHAR(150),
-    logradouro VARCHAR(255)
+    logradouro VARCHAR(255),
     logradouro VARCHAR(255),
     numero VARCHAR(10),
     complemento VARCHAR(200),
@@ -35,3 +35,69 @@ CREATE TABLE IF NOT EXISTS relatorio_cadop (
     data_registro_ans DATE
 
 )
+
+-- importar relatorio_cadop.csv
+LOAD DATA INFILE 'data/Relatorio_cadop.csv'
+    INTO TABLE relatorio_cadop
+        FIELDS TERMINATED BY ';' 
+        ENCLOSED BY '"' 
+        LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+
+--importar demonstracoes contabeis
+LOAD DATA INFILE 'data/1T2023.csv'
+    INTO TABLE relatorio_cadop
+        FIELDS TERMINATED BY ';' 
+        ENCLOSED BY '"' 
+        LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA INFILE 'data/1T2024.csv'
+    INTO TABLE relatorio_cadop
+        FIELDS TERMINATED BY ';' 
+        ENCLOSED BY '"' 
+        LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA INFILE 'data/2t2023.csv'
+    INTO TABLE relatorio_cadop
+        FIELDS TERMINATED BY ';' 
+        ENCLOSED BY '"' 
+        LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA INFILE 'data/2T2024.csv'
+    INTO TABLE relatorio_cadop
+        FIELDS TERMINATED BY ';' 
+        ENCLOSED BY '"' 
+        LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA INFILE 'data/3T2023.csv'
+    INTO TABLE relatorio_cadop
+        FIELDS TERMINATED BY ';' 
+        ENCLOSED BY '"' 
+        LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA INFILE 'data/3T2024.csv'
+    INTO TABLE relatorio_cadop
+        FIELDS TERMINATED BY ';' 
+        ENCLOSED BY '"' 
+        LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA INFILE 'data/4T2023.csv'
+    INTO TABLE relatorio_cadop
+        FIELDS TERMINATED BY ';' 
+        ENCLOSED BY '"' 
+        LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA INFILE 'data/4T2024.csv'
+    INTO TABLE relatorio_cadop
+        FIELDS TERMINATED BY ';' 
+        ENCLOSED BY '"' 
+        LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
