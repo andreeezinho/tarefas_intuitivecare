@@ -1,6 +1,6 @@
 -- demonstracoes contábeis
 
-CREATE TABLE IF NOT EXISTS `demonstracoes_contabeis` (
+CREATE TABLE IF NOT EXISTS demonstracoes_contabeis (
     data DATE,
     reg_ans INT NOT NULL,
     cd_conta_contabil BIGINT NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `demonstracoes_contabeis` (
 
 -- relatorio cadop
 
-CREATE TABLE IF NOT EXISTS `relatorio_cadop` (
+CREATE TABLE IF NOT EXISTS relatorio_cadop (
     registro_ans INT NOT NULL PRIMARY KEY,
     cnpj VARCHAR(15) UNIQUE NOT NULL,
     razao_social VARCHAR(255) NOT NULL,
