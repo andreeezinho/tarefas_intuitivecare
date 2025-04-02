@@ -1,17 +1,22 @@
 import os
-import pandas as pd
 from fastapi import FastAPI
-from model import Model
+import pandas as pd
+from controller import Controller
+
 class apiMain:
 
     app = FastAPI()
 
     def __init__(self):
-        file = "Relatorio_cadop.csv"
-        file_path = os.path.join("data", file)
+        self.file = "Relatorio_cadop.csv"
+        self.file_path = os.path.join("data", file)
+        self.data = pd.read_csv(file_path, sep=";", encoding="utf-8")
 
-        dados = pd.read_csv(file_path, sep=";", encoding="utf-8")
-        teste = Model.getData(dados)
-        print(teste)
+    @app.get("/search")
+    def search(self):
+        search = Controller.search(self.data)
+
+        if search == True
+
 if __name__ == "__main__":
     apiMain()
