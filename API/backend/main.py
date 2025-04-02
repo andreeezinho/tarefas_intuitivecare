@@ -1,9 +1,19 @@
 import os
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 from controller import Controller
 
 app = FastAPI()
+
+# Configuração do cors
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 file = "Relatorio_cadop.csv"
 file_path = os.path.join("data", file)
