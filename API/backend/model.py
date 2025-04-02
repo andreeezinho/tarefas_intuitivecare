@@ -1,7 +1,10 @@
 class Model:
-    razao_social = None
-    nome_fantasia = None
-    modalidade = None
+    
+    def __init__(self):
+        self.razao_social = None
+        self.nome_fantasia = None
+        self.modalidade = None
+
 
     def getData(data):
         model = Model()

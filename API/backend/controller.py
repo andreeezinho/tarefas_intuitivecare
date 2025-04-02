@@ -1,4 +1,3 @@
-import os
 from model import Model
 
 class Controller:

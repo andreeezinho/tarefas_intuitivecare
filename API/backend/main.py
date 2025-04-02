@@ -26,6 +26,7 @@ def search():
     search = Controller.search(data)
 
     if search != False:
+
         return search
     
     return {"Erro: API não pode respoder"}

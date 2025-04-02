@@ -23,9 +23,9 @@ defineProps({
 <template>
   <h1>Teste IntuitiveCare</h1>
 
-  <li v-for="(item, index) in data" :key="index">
-        {{ item }}
-      </li>
+  <ul v-for="(item, index) in data" :key="index">
+      <li>{{ item }}</li>
+  </ul>
 </template>
 
 <style scoped>
