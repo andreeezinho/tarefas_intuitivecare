@@ -5,7 +5,7 @@ class Controller:
     def __init__(self):
         pass
 
-    def search(self, data):
+    def search(data):
         if data.empty:
             return False
         

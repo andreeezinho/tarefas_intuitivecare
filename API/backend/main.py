@@ -3,24 +3,24 @@ from fastapi import FastAPI
 import pandas as pd
 from controller import Controller
 
-class apiMain:
+app = FastAPI()
 
-    app = FastAPI()
+file = "Relatorio_cadop.csv"
+file_path = os.path.join("data", file)
 
-    def __init__(self):
-        self.file = "Relatorio_cadop.csv"
-        self.file_path = os.path.join("data", file)
-        self.data = pd.read_csv(self.file_path, sep=";", encoding="utf-8")
+data = pd.read_csv(file_path, sep=";", encoding="utf-8")
+data = data.fillna("N/A")
 
-    @app.get("/search")
-    def search(self):
-        search = Controller.search(self.data)
+@app.get("/search")
+def search():
+    search = Controller.search(data)
 
-        if search != False:
-            return search
-        
-        return {"Erro: API não pode respoder"}
+    if search != False:
+        return search
     
+    return {"Erro: API não pode respoder"}
 
-if __name__ == "__main__":
-    apiMain()
+@app.get("/api")
+def verifyApi():
+    return {"API ativa!"}
+
