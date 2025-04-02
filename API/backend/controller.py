@@ -6,6 +6,10 @@ class Controller:
         pass
 
     def search(self, data):
+        if data.empty:
+            return False
+        
         data = Model.getData(data)
 
+        return data
         
