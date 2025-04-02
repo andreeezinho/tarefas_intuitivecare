@@ -1,15 +1,31 @@
 <script setup>
 import { ref } from 'vue'
+import  axios  from 'axios'
+import { onMounted } from 'vue'
+
+const data = ref([])
+
+onMounted(async () => {
+  try {
+    const response = await axios.get("http://127.0.0.1:8000/search")
+    data.value = response.data
+  } catch (error) {
+    console.error("Erro ao buscar as operadoras:", error)
+  }
+})
 
 defineProps({
   msg: String,
 })
 
-const count = ref(0)
 </script>
 
 <template>
+  <h1>Teste IntuitiveCare</h1>
 
+  <li v-for="(item, index) in data" :key="index">
+        {{ item }}
+      </li>
 </template>
 
 <style scoped>
