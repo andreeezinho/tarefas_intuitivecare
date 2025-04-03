@@ -13,6 +13,7 @@ class compactFiles:
             for name in os.listdir(dir_name):
                 new_dir_name = os.path.join(dir_name, name)
 
+                #se for um arquivo zipar ele
                 if os.path.isfile(new_dir_name):
                     zip_file.write(new_dir_name, name)
         

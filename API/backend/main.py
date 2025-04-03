@@ -19,10 +19,15 @@ app.add_middleware(
 file = "Relatorio_cadop.csv"
 file_path = os.path.join("data", file)
 
+#retorna todas as linhas do csv
 data = pd.read_csv(file_path, sep=";", encoding="utf-8")
+
+#substitui null por "N/A"
 data = data.fillna("N/A")
 
+#rota das operadoras
 @app.get("/search")
+#método recebe parametro da api
 def search(filter):
     search = Controller.search(filter, data)
 
@@ -31,7 +36,7 @@ def search(filter):
 
     return {"Erro na resposta da API"}
 
-
+#rota para verificar api
 @app.get("/api")
 def verifyApi():
     return {"API ativa!"}

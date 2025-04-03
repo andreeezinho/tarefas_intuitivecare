@@ -14,7 +14,8 @@ class transformData:
     def getDataTransformed(self, pdf_path):
         if transform.dataInCsv(pdf_path) == True:
             transform.renameLines()
-
+            
+            #retorna csv compactado
             compactFiles.compact("Teste_André.zip", "Arquivo.csv")
 
         return False
