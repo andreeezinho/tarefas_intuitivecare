@@ -4,11 +4,13 @@ class Controller:
     def __init__(self):
         pass
 
-    def search(data):
+    def search(filter, data):
         if data.empty:
             return False
         
-        data = Model.getData(data)
+        result = data[
+            data["Razao_Social"].str.contains(filter, case=False, na=False)
+        ]
 
-        return data
+        return result.to_dict(orient="records")
         
